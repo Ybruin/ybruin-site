@@ -7,22 +7,14 @@
     <title>ybruin-site</title>
     <link rel="icon" href="http://res.idol.yystatic.com/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="http://res.cont.yy.com/css/reset.css">
+    <!--  STYLE_COMP_PLACEHOLDER-->
     <link rel="stylesheet" type="text/css" href="../sass/index.scss">
 </head>
 <body>
+    <% include components/header %>
 
     <script src="../lib/scrat.js" type="text/javascript"></script>
-    <script>
-    require.config({
-        combo:true,
-        comboPattern:'/ybruin/pc/??%s',
-        componentsPattern:'/ybruin/pc/??%s',
-        hash:"20160620",
-        deps:__FRAMEWORK_CONFIG__
-    });
-    require.async(['../js/index.js'],function(){
-        
-    })
-    </script>
+    <!--SCRIPT_COMP_PLACEHOLDER-->
+    <!--SCRIPT_ENTRY_PLACEHOLDER-->
 </body>
 </html>

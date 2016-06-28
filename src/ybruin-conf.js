@@ -2,6 +2,7 @@ fis.config.set('projectConf',{
     name:'ybruin-site',
     terminal:'pc',
     domainList:['http://res.cont.yy.com'],
+    compDomain:'http://res.cont1.yy.com',
     outputPath:'../dist',
     compressCss:true,
     compressImg:true,
@@ -15,5 +16,4 @@ fis.config.set('projectConf.useSprite',{
     margin:2
 })
 
-})
 fis.runConf();
