@@ -1,4 +1,7 @@
 {
-	"footer": "1.0.0",
-	"mod-pic": "1.0.1"
+	"url": "http://res.cont.yy.com/components/",
+	"deps": {
+		"footer": "1.0.0",
+		"mod-pic": "1.0.1"
+	}
 }
