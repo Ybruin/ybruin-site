@@ -44,7 +44,6 @@ ybruin
     })
     // js文件
     .match('/js/**', {
-        isCombo: true, //启动非组件合并链接
         isMod: settings.useModule,
         useHash: settings.useHash,
         //release: '/js/ybruin-site/$1'
@@ -77,7 +76,7 @@ ybruin.media('dev')
     // 打包
     .match('::package', {
         postpackager: ybruin.plugin('loader', {
-            useModule: 'cmd'
+            useModule: settings.useModule //引入入口文件模式:amd,cmd,commonjs,false
         })
     })
     // 组件库
@@ -96,8 +95,8 @@ ybruin.media('build')
     .match('::package', {
         postpackager: ybruin.plugin('loader', {
             domain: settings.domainList[0], //非组件合并链接CDN
-            compDomain: 'http://res.cont.yy.com', //组件合并链接CDN
-            useModule: 'cmd' //引入入口文件模式:amd,cmd,commonjs,false
+            compDomain: settings.compDomain, //组件合并链接CDN
+            useModule: settings.useModule //引入入口文件模式:amd,cmd,commonjs,false
         })
     })
     // 对js进行压缩
@@ -124,7 +123,7 @@ ybruin.media('build')
     })
     // 组件库
     .match('/components/(**)', {
-        //release: false
+        release: false
     })
     .match('**', {
         deploy: fis.plugin('local-deliver', {
